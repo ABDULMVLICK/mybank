@@ -65,9 +65,9 @@ jobs:
 
   deploy:
     needs: [docker] # jamais de déploiement si un test ou une construction a échoué
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    # Sauté tant que Render n'est pas configuré (variable APP_URL absente) : la CI reste verte.
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && vars.APP_URL != ''
     runs-on: ubuntu-latest
-    environment: production
     steps:
       - name: Déclencher le déploiement sur Render
         run: curl -fsS -X POST "${{ secrets.RENDER_DEPLOY_HOOK_URL }}"

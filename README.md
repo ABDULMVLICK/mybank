@@ -70,7 +70,7 @@ Le workflow `.github/workflows/ci.yml` tourne à chaque push et pull request :
 2. Sur Render : *New* → *Blueprint* → choisir le dépôt. Render lit `render.yaml` et crée le service web et la base PostgreSQL.
 3. Dans le service web Render, saisir `ADMIN_MOT_DE_PASSE` (et `MONGO_URL` si vous utilisez MongoDB Atlas). `JWT_SECRET` est généré par Render.
 4. Dans *Settings* → *Deploy Hook* du service, copier l'URL.
-5. Sur GitHub, *Settings* → *Environments* → créer `production` avec le secret `RENDER_DEPLOY_HOOK_URL` (l'URL du hook) et la variable `APP_URL` (l'adresse du site, par exemple `https://mybank.onrender.com`).
+5. Sur GitHub, *Settings* → *Secrets and variables* → *Actions* : ajouter le secret `RENDER_DEPLOY_HOOK_URL` (l'URL du hook) et la variable `APP_URL` (l'adresse du site, par exemple `https://mybank.onrender.com`). Tant que `APP_URL` n'existe pas, le job deploy est sauté.
 
 Ensuite, chaque push sur `main` est testé, construit puis déployé automatiquement.
 
