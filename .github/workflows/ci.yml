@@ -1,0 +1,81 @@
+# Intégration et déploiement continus.
+# CI : à chaque push et pull request, on vérifie, on teste, puis on construit les images.
+# CD : sur la branche main uniquement, si tout est vert, on déploie sur Render puis on vérifie le site en ligne.
+name: CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: mybank
+          POSTGRES_PASSWORD: mybank
+          POSTGRES_DB: mybank_test
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U mybank"
+          --health-interval 3s
+          --health-retries 20
+    defaults:
+      run:
+        working-directory: backend
+    env:
+      DATABASE_URL: postgres://mybank:mybank@localhost:5432/mybank_test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: backend/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test # tests unitaires + tests d'intégration sur la base PostgreSQL du service
+
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+
+  docker:
+    needs: [backend, frontend] # ne construit les images que si tous les tests passent
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker compose build # images de développement (Nginx + API)
+      - run: docker build -t mybank-production . # image de production déployée sur Render
+
+  deploy:
+    needs: [docker] # jamais de déploiement si un test ou une construction a échoué
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Déclencher le déploiement sur Render
+        run: curl -fsS -X POST "${{ secrets.RENDER_DEPLOY_HOOK_URL }}"
+      - name: Vérifier que le site en ligne répond
+        run: |
+          # Render reconstruit l'image : on attend jusqu'à 10 minutes que /api/sante réponde.
+          for i in $(seq 1 40); do
+            if curl -fsS "${{ vars.APP_URL }}/api/sante"; then exit 0; fi
+            sleep 15
+          done
+          echo "Le site ne répond pas après le déploiement." && exit 1

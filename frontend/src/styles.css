@@ -1,0 +1,115 @@
+/* Charte myBank : indigo pour la structure, ambre pour l'accent. Approche mobile-first. */
+:root {
+  --indigo: #24317a;
+  --indigo-clair: #e8ebfa;
+  --ambre: #f2a900;
+  --fond: #f5f6fb;
+  --carte: #ffffff;
+  --texte: #161b33;
+  --discret: #5d6482;
+  --bord: #d9ddee;
+  --vert: #18794e;
+  --rouge: #b42318;
+  font-family: 'Manrope', system-ui, sans-serif;
+  color: var(--texte);
+  background: var(--fond);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+h1, h2 { margin: 0 0 12px; line-height: 1.2; }
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.15rem; display: flex; align-items: center; gap: 8px; }
+
+.page { min-height: 100vh; }
+.entete {
+  background: var(--indigo);
+  color: #fff;
+  padding: 12px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo { font-size: 1.3rem; letter-spacing: -0.02em; }
+.logo b { color: var(--ambre); font-weight: 800; }
+.auth .logo { color: var(--indigo); }
+.menu { display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: center; }
+.menu a { color: #fff; text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent; }
+.menu a.active { border-bottom-color: var(--ambre); }
+.menu .lien { color: #fff; }
+
+.contenu { max-width: 960px; margin: 0 auto; padding: 20px 16px 48px; display: grid; gap: 16px; }
+.carte { background: var(--carte); border: 1px solid var(--bord); border-radius: 12px; padding: 18px; min-width: 0; }
+
+.solde { display: grid; gap: 4px; background: var(--indigo); color: #fff; border: none; }
+.solde strong { font-size: 2.2rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+.solde .discret, .solde .etiquette { color: #c9cff0; }
+.etiquette { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+.auth { min-height: 100vh; display: grid; place-items: center; padding: 16px; }
+.formulaire { width: 100%; max-width: 380px; display: grid; gap: 8px; }
+.formulaire button[type='submit'] { margin-top: 8px; }
+label { font-weight: 600; font-size: 0.92rem; }
+small { color: var(--discret); }
+.masque { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+input {
+  font: inherit;
+  padding: 10px 12px;
+  border: 1px solid var(--bord);
+  border-radius: 8px;
+  min-width: 0;
+  background: #fff;
+}
+input:focus-visible, button:focus-visible, a:focus-visible { outline: 3px solid var(--ambre); outline-offset: 2px; }
+input.petit { width: 90px; padding: 6px 8px; }
+
+button {
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background: var(--indigo);
+  color: #fff;
+}
+button:disabled { opacity: 0.6; cursor: default; }
+button.secondaire { background: var(--indigo-clair); color: var(--indigo); }
+button.danger { background: var(--rouge); color: #fff; }
+button.lien { background: none; padding: 4px 0; color: var(--indigo); text-decoration: underline; }
+button.lien.danger { color: var(--rouge); }
+
+.ligne { display: flex; flex-wrap: wrap; gap: 8px; }
+.ligne input { flex: 1 1 180px; }
+
+.discret { color: var(--discret); font-size: 0.92rem; margin: 4px 0; }
+.succes { color: var(--vert); font-weight: 600; margin: 8px 0 0; }
+.erreur { color: var(--rouge); font-weight: 600; margin: 8px 0 0; }
+.chargement { padding: 24px; text-align: center; }
+
+.tableau { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 0.94rem; }
+th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--bord); white-space: nowrap; }
+th { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--discret); }
+.nombre { text-align: right; font-variant-numeric: tabular-nums; }
+.positif { color: var(--vert); }
+.negatif { color: var(--rouge); }
+.actions { text-align: right; }
+.actions button + button { margin-left: 12px; }
+tr.inactif td { color: var(--discret); font-style: italic; }
+
+.badge { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; }
+.badge.en_attente { background: #fff4d6; color: #7a5300; }
+.badge.accepte { background: #dcf3e6; color: var(--vert); }
+.badge.annule { background: #fde4e1; color: var(--rouge); }
+.compteur { background: var(--ambre); color: var(--texte); border-radius: 999px; padding: 0 10px; font-size: 0.85rem; }
+
+.journal { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; font-size: 0.92rem; }
+
+@media (min-width: 768px) {
+  .contenu { padding-top: 32px; }
+  .entete { padding: 14px 32px; }
+}

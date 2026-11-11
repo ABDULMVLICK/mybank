@@ -1,0 +1,48 @@
+# Lance toute l'application avec : docker compose up --build
+# Puis ouvrez http://localhost:8080
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: mybank
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-mybank}
+      POSTGRES_DB: mybank
+    volumes:
+      - donnees-postgres:/var/lib/postgresql/data
+      # Au premier démarrage, PostgreSQL exécute ces fichiers dans l'ordre : tables, puis premier admin.
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ./database/seed.sql:/docker-entrypoint-initdb.d/02-seed.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mybank"]
+      interval: 3s
+      retries: 20
+
+  mongo:
+    image: mongo:7
+    volumes:
+      - donnees-mongo:/data/db
+
+  api:
+    build: ./backend
+    environment:
+      DATABASE_URL: postgres://mybank:${POSTGRES_PASSWORD:-mybank}@postgres:5432/mybank
+      MONGO_URL: mongodb://mongo:27017/mybank
+      JWT_SECRET: ${JWT_SECRET:-a-changer-en-production}
+      COOKIE_SECURE: ${COOKIE_SECURE:-false} # true quand le site est servi en HTTPS
+      TRUST_PROXY: "true" # Nginx est devant l'API : l'IP réelle est dans X-Forwarded-For
+    depends_on:
+      postgres:
+        condition: service_healthy
+      mongo:
+        condition: service_started
+
+  web:
+    build: ./frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - api
+
+volumes:
+  donnees-postgres:
+  donnees-mongo:
