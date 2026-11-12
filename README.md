@@ -15,7 +15,7 @@ Projet réalisé pour le titre professionnel Concepteur Développeur d'Applicati
 | Base NoSQL | MongoDB 7 (journal des actions) |
 | Sécurité | bcrypt, JWT en cookie httpOnly, helmet, limite de tentatives |
 | Tests | Vitest, Supertest |
-| DevOps | Docker, Docker Compose, GitHub Actions (CI/CD), Render |
+| DevOps | Docker, Docker Compose, GitHub Actions (CI/CD), Railway |
 
 ## Lancer le projet avec Docker (recommandé)
 
@@ -62,15 +62,15 @@ Le workflow `.github/workflows/ci.yml` tourne à chaque push et pull request :
 1. **backend** : vérification des types, tests unitaires et d'intégration sur PostgreSQL ;
 2. **frontend** : tests et construction ;
 3. **docker** : construction des images (développement et production), si tout est vert ;
-4. **deploy** : sur `main` uniquement, déclenche le déploiement sur Render, puis vérifie que `/api/sante` répond en ligne.
+4. **deploy** : sur `main` uniquement, déploie sur Railway (`railway up`), puis vérifie que `/api/sante` répond en ligne.
 
 ### Mettre en place le déploiement (une seule fois)
 
-1. Pousser le dépôt sur GitHub.
-2. Sur Render : *New* → *Blueprint* → choisir le dépôt. Render lit `render.yaml` et crée le service web et la base PostgreSQL.
-3. Dans le service web Render, saisir `ADMIN_MOT_DE_PASSE` (et `MONGO_URL` si vous utilisez MongoDB Atlas). `JWT_SECRET` est généré par Render.
-4. Dans *Settings* → *Deploy Hook* du service, copier l'URL.
-5. Sur GitHub, *Settings* → *Secrets and variables* → *Actions* : ajouter le secret `RENDER_DEPLOY_HOOK_URL` (l'URL du hook) et la variable `APP_URL` (l'adresse du site, par exemple `https://mybank.onrender.com`). Tant que `APP_URL` n'existe pas, le job deploy est sauté.
+1. Sur Railway, créer un projet avec une base **PostgreSQL** et un service vide nommé **`mybank`**. Le fichier `railway.json` indique de construire le `Dockerfile` et de surveiller `/api/sante`.
+2. Variables du service `mybank` : `DATABASE_URL=${{Postgres.DATABASE_URL}}`, `JWT_SECRET` (longue valeur aléatoire), `ADMIN_MOT_DE_PASSE`, `COOKIE_SECURE=true`, `TRUST_PROXY=true`, `INIT_BASE=true` (et `MONGO_URL` si vous utilisez MongoDB). Railway fournit `PORT`.
+3. Générer un domaine public pour le service (*Settings* → *Networking*).
+4. Créer un jeton de projet (*Project Settings* → *Tokens*).
+5. Sur GitHub, *Settings* → *Secrets and variables* → *Actions* : ajouter le secret `RAILWAY_TOKEN` et la variable `APP_URL` (l'adresse du site). Tant que `APP_URL` n'existe pas, le job deploy est sauté.
 
 Ensuite, chaque push sur `main` est testé, construit puis déployé automatiquement.
 
@@ -96,7 +96,7 @@ backend/src
 | `MONGO_URL` | connexion MongoDB (facultatif) |
 | `JWT_SECRET` | clé de signature des jetons, obligatoire en production |
 | `COOKIE_SECURE` | `true` quand le site est servi en HTTPS |
-| `TRUST_PROXY` | `true` derrière un reverse proxy (Nginx, Render) |
+| `TRUST_PROXY` | `true` derrière un reverse proxy (Nginx, Railway) |
 | `INIT_BASE` | `true` pour créer les tables au démarrage si la base est vide |
 | `ADMIN_MOT_DE_PASSE` | avec `INIT_BASE`, crée le premier admin s'il n'en existe aucun |
 | `DOSSIER_PUBLIC` | dossier du front compilé à servir (défini dans l'image de production) |

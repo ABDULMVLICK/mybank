@@ -1,6 +1,6 @@
 # Intégration et déploiement continus.
 # CI : à chaque push et pull request, on vérifie, on teste, puis on construit les images.
-# CD : sur la branche main uniquement, si tout est vert, on déploie sur Render puis on vérifie le site en ligne.
+# CD : sur la branche main uniquement, si tout est vert, on déploie sur Railway puis on vérifie le site en ligne.
 name: CI/CD
 
 on:
@@ -61,20 +61,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: docker compose build # images de développement (Nginx + API)
-      - run: docker build -t mybank-production . # image de production déployée sur Render
+      - run: docker build -t mybank-production . # image de production déployée sur Railway
 
   deploy:
     needs: [docker] # jamais de déploiement si un test ou une construction a échoué
-    # Sauté tant que Render n'est pas configuré (variable APP_URL absente) : la CI reste verte.
+    # Sauté tant que Railway n'est pas configuré (variable APP_URL absente) : la CI reste verte.
     if: github.event_name == 'push' && github.ref == 'refs/heads/main' && vars.APP_URL != ''
     runs-on: ubuntu-latest
+    env:
+      RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }} # jeton du projet Railway, jamais dans le code
     steps:
-      - name: Déclencher le déploiement sur Render
-        run: curl -fsS -X POST "${{ secrets.RENDER_DEPLOY_HOOK_URL }}"
+      - uses: actions/checkout@v4
+      - name: Installer la CLI Railway
+        run: npm install -g @railway/cli
+      - name: Déployer sur Railway
+        # Envoie le code, Railway construit le Dockerfile ; --ci attend la fin et échoue si le build échoue.
+        run: railway up --service mybank --ci
       - name: Vérifier que le site en ligne répond
         run: |
-          # Render reconstruit l'image : on attend jusqu'à 10 minutes que /api/sante réponde.
-          for i in $(seq 1 40); do
+          for i in $(seq 1 20); do
             if curl -fsS "${{ vars.APP_URL }}/api/sante"; then exit 0; fi
             sleep 15
           done
