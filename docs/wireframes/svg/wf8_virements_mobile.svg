@@ -1,0 +1,57 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='400' height='898' viewBox='0 0 400 898'>
+<rect width='400' height='898' fill='#ffffff'/>
+<text x='20' y='30' font-family='Arial, Helvetica, sans-serif' font-size='18' font-weight='700' fill='#333333'>Wireframe 8 — Virements (mobile)</text>
+<g transform='translate(20,48)'><rect x='-1' y='-1' width='362' height='742' fill='#fafafa' stroke='#333333' stroke-width='2' rx='6'/>
+<rect x='0' y='0' width='360' height='56' rx='0' fill='#8c8c8c' stroke='#8c8c8c' stroke-width='1.5'/>
+<text x='20' y='35' font-family='Arial, Helvetica, sans-serif' font-size='20' font-weight='700' fill='#ffffff' text-anchor='start'>myBank</text>
+<rect x='304' y='14' width='36' height='28' rx='4' fill='#ffffff' stroke='#ffffff' stroke-width='1.5'/>
+<line x1='312' y1='22' x2='332' y2='22' stroke='#8c8c8c' stroke-width='2'/>
+<line x1='312' y1='28' x2='332' y2='28' stroke='#8c8c8c' stroke-width='2'/>
+<line x1='312' y1='34' x2='332' y2='34' stroke='#8c8c8c' stroke-width='2'/>
+<rect x='16' y='76' width='328' height='250' rx='8' fill='#ffffff' stroke='#bdbdbd' stroke-width='1.5'/>
+<text x='36' y='108' font-family='Arial, Helvetica, sans-serif' font-size='17' font-weight='700' fill='#333333' text-anchor='start'>Nouveau virement</text>
+<rect x='36' y='122' width='288' height='38' rx='4' fill='#ffffff' stroke='#bdbdbd' stroke-width='1.5'/>
+<text x='48' y='146' font-family='Arial, Helvetica, sans-serif' font-size='13' fill='#bdbdbd' text-anchor='start'>Identifiant du bénéficiaire</text>
+<rect x='36' y='172' width='288' height='38' rx='4' fill='#ffffff' stroke='#bdbdbd' stroke-width='1.5'/>
+<text x='48' y='196' font-family='Arial, Helvetica, sans-serif' font-size='13' fill='#bdbdbd' text-anchor='start'>Montant (1 à 500 €)</text>
+<rect x='36' y='222' width='288' height='38' rx='6' fill='#8c8c8c' stroke='#8c8c8c' stroke-width='1.5'/>
+<text x='180.0' y='246.0' font-family='Arial, Helvetica, sans-serif' font-size='14' font-weight='700' fill='#ffffff' text-anchor='middle'>Envoyer</text>
+<rect x='36' y='272' width='288' height='38' rx='4' fill='#f2f2f2' stroke='#8c8c8c' stroke-width='1.5' stroke-dasharray='6 4'/>
+<text x='48' y='296' font-family='Arial, Helvetica, sans-serif' font-size='13' fill='#8c8c8c' text-anchor='start'>Message</text>
+<circle cx='330' cy='96' r='13' fill='#d9480f'/>
+<text x='330' y='101' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='700' fill='#ffffff' text-anchor='middle'>1</text>
+<rect x='16' y='342' width='328' height='376' rx='8' fill='#ffffff' stroke='#bdbdbd' stroke-width='1.5'/>
+<text x='36' y='374' font-family='Arial, Helvetica, sans-serif' font-size='17' font-weight='700' fill='#333333' text-anchor='start'>Mes virements</text>
+<rect x='36' y='384' width='120' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='36' y='402' width='170' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='240' y='380' width='84' height='20' rx='10' fill='#d9d9d9' stroke='#8c8c8c' stroke-width='1.5'/>
+<text x='282' y='394' font-family='Arial, Helvetica, sans-serif' font-size='11' fill='#333333' text-anchor='middle'>État</text>
+<line x1='36' y1='428' x2='324' y2='428' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='36' y='448' width='120' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='36' y='466' width='170' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='240' y='444' width='84' height='20' rx='10' fill='#d9d9d9' stroke='#8c8c8c' stroke-width='1.5'/>
+<text x='282' y='458' font-family='Arial, Helvetica, sans-serif' font-size='11' fill='#333333' text-anchor='middle'>État</text>
+<line x1='36' y1='492' x2='324' y2='492' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='36' y='512' width='120' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='36' y='530' width='170' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='240' y='508' width='84' height='20' rx='10' fill='#d9d9d9' stroke='#8c8c8c' stroke-width='1.5'/>
+<text x='282' y='522' font-family='Arial, Helvetica, sans-serif' font-size='11' fill='#333333' text-anchor='middle'>État</text>
+<line x1='36' y1='556' x2='324' y2='556' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='36' y='576' width='120' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='36' y='594' width='170' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='240' y='572' width='84' height='20' rx='10' fill='#d9d9d9' stroke='#8c8c8c' stroke-width='1.5'/>
+<text x='282' y='586' font-family='Arial, Helvetica, sans-serif' font-size='11' fill='#333333' text-anchor='middle'>État</text>
+<line x1='36' y1='620' x2='324' y2='620' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='36' y='640' width='120' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='36' y='658' width='170' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='240' y='636' width='84' height='20' rx='10' fill='#d9d9d9' stroke='#8c8c8c' stroke-width='1.5'/>
+<text x='282' y='650' font-family='Arial, Helvetica, sans-serif' font-size='11' fill='#333333' text-anchor='middle'>État</text>
+<line x1='36' y1='684' x2='324' y2='684' stroke='#d9d9d9' stroke-width='1.5'/>
+<circle cx='330' cy='362' r='13' fill='#d9480f'/>
+<text x='330' y='367' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='700' fill='#ffffff' text-anchor='middle'>2</text>
+</g>
+<circle cx='32' cy='822' r='10' fill='#d9480f'/><text x='32' y='826' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='700' fill='#fff' text-anchor='middle'>1</text>
+<text x='52' y='827' font-family='Arial, Helvetica, sans-serif' font-size='14' fill='#333333'>Champs empilés, clavier numérique</text>
+<circle cx='32' cy='846' r='10' fill='#d9480f'/><text x='32' y='850' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='700' fill='#fff' text-anchor='middle'>2</text>
+<text x='52' y='851' font-family='Arial, Helvetica, sans-serif' font-size='14' fill='#333333'>Un virement par carte, avec son badge d&#x27;état</text>
+</svg>

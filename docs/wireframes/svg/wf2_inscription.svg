@@ -1,0 +1,40 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1000' height='826' viewBox='0 0 1000 826'>
+<rect width='1000' height='826' fill='#ffffff'/>
+<text x='20' y='30' font-family='Arial, Helvetica, sans-serif' font-size='18' font-weight='700' fill='#333333'>Wireframe 2 — Inscription (ordinateur)</text>
+<g transform='translate(20,48)'><rect x='-1' y='-1' width='962' height='622' fill='#fafafa' stroke='#333333' stroke-width='2' rx='6'/>
+<rect x='300' y='40' width='360' height='540' rx='8' fill='#ffffff' stroke='#bdbdbd' stroke-width='1.5'/>
+<text x='480' y='92' font-family='Arial, Helvetica, sans-serif' font-size='28' font-weight='700' fill='#333333' text-anchor='middle'>myBank</text>
+<text x='480' y='125' font-family='Arial, Helvetica, sans-serif' font-size='18' font-weight='700' fill='#333333' text-anchor='middle'>Créer un compte</text>
+<text x='330' y='155' font-family='Arial, Helvetica, sans-serif' font-size='13' fill='#8c8c8c' text-anchor='start'>Identifiant</text>
+<rect x='330' y='163' width='300' height='36' rx='4' fill='#ffffff' stroke='#bdbdbd' stroke-width='1.5'/>
+<text x='342' y='186' font-family='Arial, Helvetica, sans-serif' font-size='13' fill='#bdbdbd' text-anchor='start'>3 à 30 caractères</text>
+<circle cx='650' cy='185' r='13' fill='#d9480f'/>
+<text x='650' y='190' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='700' fill='#ffffff' text-anchor='middle'>1</text>
+<text x='330' y='225' font-family='Arial, Helvetica, sans-serif' font-size='13' fill='#8c8c8c' text-anchor='start'>Nom</text>
+<rect x='330' y='233' width='300' height='36' rx='4' fill='#ffffff' stroke='#bdbdbd' stroke-width='1.5'/>
+<text x='330' y='295' font-family='Arial, Helvetica, sans-serif' font-size='13' fill='#8c8c8c' text-anchor='start'>Mot de passe</text>
+<rect x='330' y='303' width='300' height='36' rx='4' fill='#ffffff' stroke='#bdbdbd' stroke-width='1.5'/>
+<text x='342' y='326' font-family='Arial, Helvetica, sans-serif' font-size='13' fill='#bdbdbd' text-anchor='start'>8 caractères, lettre et chiffre</text>
+<circle cx='650' cy='325' r='13' fill='#d9480f'/>
+<text x='650' y='330' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='700' fill='#ffffff' text-anchor='middle'>2</text>
+<rect x='330' y='360' width='300' height='66' rx='4' fill='#f2f2f2' stroke='#bdbdbd' stroke-width='1.5'/>
+<rect x='342' y='372' width='262.2' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='342' y='388' width='262.2' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='342' y='404' width='165.6' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<circle cx='650' cy='393' r='13' fill='#d9480f'/>
+<text x='650' y='398' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='700' fill='#ffffff' text-anchor='middle'>3</text>
+<rect x='330' y='445' width='300' height='38' rx='6' fill='#8c8c8c' stroke='#8c8c8c' stroke-width='1.5'/>
+<text x='480.0' y='469.0' font-family='Arial, Helvetica, sans-serif' font-size='14' font-weight='700' fill='#ffffff' text-anchor='middle'>Créer mon compte</text>
+<circle cx='650' cy='464' r='13' fill='#d9480f'/>
+<text x='650' y='469' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='700' fill='#ffffff' text-anchor='middle'>4</text>
+<text x='480' y='515' font-family='Arial, Helvetica, sans-serif' font-size='13' fill='#8c8c8c' text-anchor='middle'>Déjà inscrit ? Se connecter</text>
+</g>
+<circle cx='32' cy='702' r='10' fill='#d9480f'/><text x='32' y='706' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='700' fill='#fff' text-anchor='middle'>1</text>
+<text x='52' y='707' font-family='Arial, Helvetica, sans-serif' font-size='14' fill='#333333'>Identifiant unique (règle 3)</text>
+<circle cx='32' cy='726' r='10' fill='#d9480f'/><text x='32' y='730' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='700' fill='#fff' text-anchor='middle'>2</text>
+<text x='52' y='731' font-family='Arial, Helvetica, sans-serif' font-size='14' fill='#333333'>Règle de mot de passe affichée avant la saisie</text>
+<circle cx='32' cy='750' r='10' fill='#d9480f'/><text x='32' y='754' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='700' fill='#fff' text-anchor='middle'>3</text>
+<text x='52' y='755' font-family='Arial, Helvetica, sans-serif' font-size='14' fill='#333333'>Information RGPD : usage des données, droit à l&#x27;effacement</text>
+<circle cx='32' cy='774' r='10' fill='#d9480f'/><text x='32' y='778' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='700' fill='#fff' text-anchor='middle'>4</text>
+<text x='52' y='779' font-family='Arial, Helvetica, sans-serif' font-size='14' fill='#333333'>Compte client créé avec un solde de 0 €</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1000' height='846' viewBox='0 0 1000 846'>
+<rect width='1000' height='846' fill='#ffffff'/>
+<text x='20' y='30' font-family='Arial, Helvetica, sans-serif' font-size='18' font-weight='700' fill='#333333'>Wireframe 3 — Mon compte (client, ordinateur)</text>
+<g transform='translate(20,48)'><rect x='-1' y='-1' width='962' height='642' fill='#fafafa' stroke='#333333' stroke-width='2' rx='6'/>
+<rect x='0' y='0' width='960' height='56' rx='0' fill='#8c8c8c' stroke='#8c8c8c' stroke-width='1.5'/>
+<text x='20' y='35' font-family='Arial, Helvetica, sans-serif' font-size='20' font-weight='700' fill='#ffffff' text-anchor='start'>myBank</text>
+<text x='170' y='35' font-family='Arial, Helvetica, sans-serif' font-size='14' font-weight='700' fill='#ffffff' text-anchor='start'>Mon compte</text>
+<line x1='170' y1='44' x2='245.0' y2='44' stroke='#ffffff' stroke-width='3'/>
+<text x='284' y='35' font-family='Arial, Helvetica, sans-serif' font-size='14' fill='#ffffff' text-anchor='start'>Virements</text>
+<text x='390' y='35' font-family='Arial, Helvetica, sans-serif' font-size='14' fill='#ffffff' text-anchor='start'>Profil</text>
+<rect x='810' y='10' width='130' height='36' rx='6' fill='#ffffff' stroke='#8c8c8c' stroke-width='1.5'/>
+<text x='875.0' y='33.0' font-family='Arial, Helvetica, sans-serif' font-size='14' font-weight='700' fill='#333333' text-anchor='middle'>Déconnexion</text>
+<circle cx='440' cy='28' r='13' fill='#d9480f'/>
+<text x='440' y='33' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='700' fill='#ffffff' text-anchor='middle'>1</text>
+<rect x='30' y='80' width='900' height='110' rx='8' fill='#ffffff' stroke='#bdbdbd' stroke-width='1.5'/>
+<text x='55' y='115' font-family='Arial, Helvetica, sans-serif' font-size='14' fill='#8c8c8c' text-anchor='start'>Mon solde</text>
+<text x='55' y='165' font-family='Arial, Helvetica, sans-serif' font-size='40' font-weight='700' fill='#333333' text-anchor='start'>0,00 €</text>
+<circle cx='300' cy='150' r='13' fill='#d9480f'/>
+<text x='300' y='155' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='700' fill='#ffffff' text-anchor='middle'>2</text>
+<rect x='30' y='210' width='440' height='120' rx='8' fill='#ffffff' stroke='#bdbdbd' stroke-width='1.5'/>
+<text x='50' y='242' font-family='Arial, Helvetica, sans-serif' font-size='17' font-weight='700' fill='#333333' text-anchor='start'>Déposer</text>
+<rect x='55' y='260' width='230' height='38' rx='4' fill='#ffffff' stroke='#bdbdbd' stroke-width='1.5'/>
+<text x='67' y='284' font-family='Arial, Helvetica, sans-serif' font-size='13' fill='#bdbdbd' text-anchor='start'>Montant (€)</text>
+<rect x='300' y='260' width='140' height='38' rx='6' fill='#8c8c8c' stroke='#8c8c8c' stroke-width='1.5'/>
+<text x='370.0' y='284.0' font-family='Arial, Helvetica, sans-serif' font-size='14' font-weight='700' fill='#ffffff' text-anchor='middle'>Déposer</text>
+<rect x='490' y='210' width='440' height='120' rx='8' fill='#ffffff' stroke='#bdbdbd' stroke-width='1.5'/>
+<text x='510' y='242' font-family='Arial, Helvetica, sans-serif' font-size='17' font-weight='700' fill='#333333' text-anchor='start'>Retirer</text>
+<rect x='515' y='260' width='230' height='38' rx='4' fill='#ffffff' stroke='#bdbdbd' stroke-width='1.5'/>
+<text x='527' y='284' font-family='Arial, Helvetica, sans-serif' font-size='13' fill='#bdbdbd' text-anchor='start'>Montant (€)</text>
+<rect x='760' y='260' width='140' height='38' rx='6' fill='#8c8c8c' stroke='#8c8c8c' stroke-width='1.5'/>
+<text x='830.0' y='284.0' font-family='Arial, Helvetica, sans-serif' font-size='14' font-weight='700' fill='#ffffff' text-anchor='middle'>Retirer</text>
+<circle cx='470' cy='230' r='13' fill='#d9480f'/>
+<text x='470' y='235' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='700' fill='#ffffff' text-anchor='middle'>3</text>
+<rect x='30' y='350' width='900' height='270' rx='8' fill='#ffffff' stroke='#bdbdbd' stroke-width='1.5'/>
+<text x='50' y='382' font-family='Arial, Helvetica, sans-serif' font-size='17' font-weight='700' fill='#333333' text-anchor='start'>Historique des opérations</text>
+<rect x='55' y='400' width='850' height='34' rx='0' fill='#d9d9d9' stroke='#bdbdbd' stroke-width='1.5'/>
+<text x='65.0' y='422' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='700' fill='#333333' text-anchor='start'>Date</text>
+<text x='348.3333333333333' y='422' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='700' fill='#333333' text-anchor='start'>Type</text>
+<text x='631.6666666666666' y='422' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='700' fill='#333333' text-anchor='start'>Montant</text>
+<line x1='55' y1='470' x2='905' y2='470' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='65.0' y='448' width='169.99999999999997' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='348.3333333333333' y='448' width='169.99999999999997' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='631.6666666666666' y='448' width='169.99999999999997' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<line x1='55' y1='506' x2='905' y2='506' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='65.0' y='484' width='169.99999999999997' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='348.3333333333333' y='484' width='169.99999999999997' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='631.6666666666666' y='484' width='169.99999999999997' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<line x1='55' y1='542' x2='905' y2='542' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='65.0' y='520' width='169.99999999999997' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='348.3333333333333' y='520' width='169.99999999999997' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='631.6666666666666' y='520' width='169.99999999999997' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<line x1='55' y1='578' x2='905' y2='578' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='65.0' y='556' width='169.99999999999997' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='348.3333333333333' y='556' width='169.99999999999997' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='631.6666666666666' y='556' width='169.99999999999997' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<line x1='55' y1='614' x2='905' y2='614' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='65.0' y='592' width='169.99999999999997' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='348.3333333333333' y='592' width='169.99999999999997' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='631.6666666666666' y='592' width='169.99999999999997' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<circle cx='905' cy='372' r='13' fill='#d9480f'/>
+<text x='905' y='377' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='700' fill='#ffffff' text-anchor='middle'>4</text>
+</g>
+<circle cx='32' cy='722' r='10' fill='#d9480f'/><text x='32' y='726' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='700' fill='#fff' text-anchor='middle'>1</text>
+<text x='52' y='727' font-family='Arial, Helvetica, sans-serif' font-size='14' fill='#333333'>Menu du client, onglet actif souligné</text>
+<circle cx='32' cy='746' r='10' fill='#d9480f'/><text x='32' y='750' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='700' fill='#fff' text-anchor='middle'>2</text>
+<text x='52' y='751' font-family='Arial, Helvetica, sans-serif' font-size='14' fill='#333333'>Le solde, information principale, en grand</text>
+<circle cx='32' cy='770' r='10' fill='#d9480f'/><text x='32' y='774' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='700' fill='#fff' text-anchor='middle'>3</text>
+<text x='52' y='775' font-family='Arial, Helvetica, sans-serif' font-size='14' fill='#333333'>Dépôt et retrait côte à côte ; accepte « 12,50 »</text>
+<circle cx='32' cy='794' r='10' fill='#d9480f'/><text x='32' y='798' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='700' fill='#fff' text-anchor='middle'>4</text>
+<text x='52' y='799' font-family='Arial, Helvetica, sans-serif' font-size='14' fill='#333333'>Dépôts et retraits, du plus récent au plus ancien (règle 6)</text>
+</svg>

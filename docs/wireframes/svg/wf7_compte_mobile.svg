@@ -1,0 +1,57 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='400' height='922' viewBox='0 0 400 922'>
+<rect width='400' height='922' fill='#ffffff'/>
+<text x='20' y='30' font-family='Arial, Helvetica, sans-serif' font-size='18' font-weight='700' fill='#333333'>Wireframe 7 — Mon compte (mobile)</text>
+<g transform='translate(20,48)'><rect x='-1' y='-1' width='362' height='742' fill='#fafafa' stroke='#333333' stroke-width='2' rx='6'/>
+<rect x='0' y='0' width='360' height='56' rx='0' fill='#8c8c8c' stroke='#8c8c8c' stroke-width='1.5'/>
+<text x='20' y='35' font-family='Arial, Helvetica, sans-serif' font-size='20' font-weight='700' fill='#ffffff' text-anchor='start'>myBank</text>
+<rect x='304' y='14' width='36' height='28' rx='4' fill='#ffffff' stroke='#ffffff' stroke-width='1.5'/>
+<line x1='312' y1='22' x2='332' y2='22' stroke='#8c8c8c' stroke-width='2'/>
+<line x1='312' y1='28' x2='332' y2='28' stroke='#8c8c8c' stroke-width='2'/>
+<line x1='312' y1='34' x2='332' y2='34' stroke='#8c8c8c' stroke-width='2'/>
+<circle cx='280' cy='28' r='13' fill='#d9480f'/>
+<text x='280' y='33' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='700' fill='#ffffff' text-anchor='middle'>1</text>
+<rect x='16' y='76' width='328' height='110' rx='8' fill='#ffffff' stroke='#bdbdbd' stroke-width='1.5'/>
+<text x='36' y='108' font-family='Arial, Helvetica, sans-serif' font-size='13' fill='#8c8c8c' text-anchor='start'>Mon solde</text>
+<text x='36' y='160' font-family='Arial, Helvetica, sans-serif' font-size='36' font-weight='700' fill='#333333' text-anchor='start'>0,00 €</text>
+<rect x='16' y='202' width='328' height='200' rx='8' fill='#ffffff' stroke='#bdbdbd' stroke-width='1.5'/>
+<text x='36' y='234' font-family='Arial, Helvetica, sans-serif' font-size='17' font-weight='700' fill='#333333' text-anchor='start'>Déposer / Retirer</text>
+<rect x='36' y='250' width='288' height='38' rx='4' fill='#ffffff' stroke='#bdbdbd' stroke-width='1.5'/>
+<text x='48' y='274' font-family='Arial, Helvetica, sans-serif' font-size='13' fill='#bdbdbd' text-anchor='start'>Montant (€)</text>
+<rect x='36' y='300' width='288' height='38' rx='6' fill='#8c8c8c' stroke='#8c8c8c' stroke-width='1.5'/>
+<text x='180.0' y='324.0' font-family='Arial, Helvetica, sans-serif' font-size='14' font-weight='700' fill='#ffffff' text-anchor='middle'>Déposer</text>
+<rect x='36' y='348' width='288' height='38' rx='6' fill='#ffffff' stroke='#8c8c8c' stroke-width='1.5'/>
+<text x='180.0' y='372.0' font-family='Arial, Helvetica, sans-serif' font-size='14' font-weight='700' fill='#333333' text-anchor='middle'>Retirer</text>
+<circle cx='330' cy='222' r='13' fill='#d9480f'/>
+<text x='330' y='227' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='700' fill='#ffffff' text-anchor='middle'>2</text>
+<rect x='16' y='418' width='328' height='300' rx='8' fill='#ffffff' stroke='#bdbdbd' stroke-width='1.5'/>
+<text x='36' y='450' font-family='Arial, Helvetica, sans-serif' font-size='17' font-weight='700' fill='#333333' text-anchor='start'>Historique</text>
+<rect x='36' y='460' width='140' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='36' y='476' width='90' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='250' y='464' width='74' height='12' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<line x1='36' y1='496' x2='324' y2='496' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='36' y='510' width='140' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='36' y='526' width='90' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='250' y='514' width='74' height='12' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<line x1='36' y1='546' x2='324' y2='546' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='36' y='560' width='140' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='36' y='576' width='90' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='250' y='564' width='74' height='12' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<line x1='36' y1='596' x2='324' y2='596' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='36' y='610' width='140' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='36' y='626' width='90' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='250' y='614' width='74' height='12' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<line x1='36' y1='646' x2='324' y2='646' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='36' y='660' width='140' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='36' y='676' width='90' height='8' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<rect x='250' y='664' width='74' height='12' rx='3' fill='#d9d9d9' stroke='#d9d9d9' stroke-width='1.5'/>
+<line x1='36' y1='696' x2='324' y2='696' stroke='#d9d9d9' stroke-width='1.5'/>
+<circle cx='330' cy='438' r='13' fill='#d9480f'/>
+<text x='330' y='443' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='700' fill='#ffffff' text-anchor='middle'>3</text>
+</g>
+<circle cx='32' cy='822' r='10' fill='#d9480f'/><text x='32' y='826' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='700' fill='#fff' text-anchor='middle'>1</text>
+<text x='52' y='827' font-family='Arial, Helvetica, sans-serif' font-size='14' fill='#333333'>Menu replié dans un bouton</text>
+<circle cx='32' cy='846' r='10' fill='#d9480f'/><text x='32' y='850' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='700' fill='#fff' text-anchor='middle'>2</text>
+<text x='52' y='851' font-family='Arial, Helvetica, sans-serif' font-size='14' fill='#333333'>Une colonne, boutons pleine largeur</text>
+<circle cx='32' cy='870' r='10' fill='#d9480f'/><text x='32' y='874' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='700' fill='#fff' text-anchor='middle'>3</text>
+<text x='52' y='875' font-family='Arial, Helvetica, sans-serif' font-size='14' fill='#333333'>Lignes empilées, sans défilement latéral</text>
+</svg>
