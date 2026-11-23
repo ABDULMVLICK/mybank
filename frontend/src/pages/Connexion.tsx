@@ -39,6 +39,7 @@ export default function Connexion() {
         {erreur && <p className="erreur" role="alert">{erreur}</p>}
         <button type="submit" disabled={envoi}>{envoi ? 'Connexion…' : 'Se connecter'}</button>
         <p className="discret">Pas encore de compte ? <Link to="/inscription">Créer un compte</Link></p>
+        <p className="discret"><Link to="/confidentialite">Confidentialité et mentions légales</Link></p>
       </form>
     </main>
   );

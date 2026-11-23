@@ -55,12 +55,30 @@ Les tests unitaires tournent toujours. Les tests d'intégration ne tournent que 
 DATABASE_URL=postgres://mybank:mybank@localhost:55432/mybank_test npm test
 ```
 
+Qualité et couverture :
+
+```bash
+npm run lint        # Oxlint, dans backend/ et frontend/
+npm run couverture  # couverture des tests, dans backend/ (avec DATABASE_URL, comme ci-dessus)
+npm audit --audit-level=high
+```
+
+## Sauvegarder et restaurer la base
+
+```bash
+docker compose exec -T postgres pg_dump -U mybank -d mybank -Fc > mybank.dump
+docker compose exec -T postgres createdb -U mybank mybank_restauration
+docker compose exec -T postgres pg_restore -U mybank -d mybank_restauration --exit-on-error < mybank.dump
+```
+
+On restaure d'abord dans une base à part, on compare, puis seulement on remplace la base d'origine.
+
 ## Intégration et déploiement continus
 
 Le workflow `.github/workflows/ci.yml` tourne à chaque push et pull request :
 
-1. **backend** : vérification des types, tests unitaires et d'intégration sur PostgreSQL ;
-2. **frontend** : tests et construction ;
+1. **backend** : lint, audit des dépendances, vérification des types, tests unitaires et d'intégration sur PostgreSQL avec la couverture ;
+2. **frontend** : lint, audit des dépendances, tests et construction ;
 3. **docker** : construction des images (développement et production), si tout est vert ;
 4. **deploy** : sur `main` uniquement, déploie sur Railway (`railway up`), puis vérifie que `/api/sante` répond en ligne.
 

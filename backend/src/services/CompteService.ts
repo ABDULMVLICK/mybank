@@ -27,7 +27,7 @@ export class CompteService {
 
   private async mouvement(idClient: number, corps: unknown, type: TypeOperation): Promise<VueUtilisateur> {
     const montant = versCentimes(lireChamp(corps, 'montant'));
-    const client = await enTransaction(async (tx) => {
+    const clientModifie = await enTransaction(async (tx) => {
       const utilisateurs = new UtilisateurRepository(tx);
       const client = exigerClient(await utilisateurs.trouverParId(idClient, true));
       if (type === 'depot') client.deposer(montant);
@@ -37,7 +37,7 @@ export class CompteService {
       return client;
     });
     await journaliser(type, idClient, { montantCentimes: montant });
-    return versVueUtilisateur(client);
+    return versVueUtilisateur(clientModifie);
   }
 
   async operations(idClient: number): Promise<VueOperation[]> {

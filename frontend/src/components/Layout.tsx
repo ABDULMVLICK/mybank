@@ -1,4 +1,4 @@
-import { NavLink, Outlet, useNavigate } from 'react-router-dom';
+import { Link, NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { useAuth } from '../AuthContext';
 
 export default function Layout() {
@@ -29,6 +29,9 @@ export default function Layout() {
       <main className="contenu">
         <Outlet />
       </main>
+      <footer className="pied">
+        <Link to="/confidentialite">Confidentialité et mentions légales</Link>
+      </footer>
     </div>
   );
 }

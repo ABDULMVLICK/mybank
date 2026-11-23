@@ -43,7 +43,8 @@ export default function Inscription() {
         <input id="motDePasse" type="password" autoComplete="new-password" value={motDePasse} onChange={(e) => setMotDePasse(e.target.value)} required />
         <small>Au moins 8 caractères, avec une lettre et un chiffre.</small>
         <p className="discret">
-          Vos données servent uniquement à faire fonctionner votre compte. Vous pouvez supprimer votre compte à tout moment depuis votre profil.
+          Vos données servent uniquement à faire fonctionner votre compte. Vous pouvez supprimer votre compte à tout moment depuis votre profil.{' '}
+          <Link to="/confidentialite">En savoir plus</Link>
         </p>
         {erreur && <p className="erreur" role="alert">{erreur}</p>}
         <button type="submit" disabled={envoi}>{envoi ? 'Création…' : 'Créer mon compte'}</button>

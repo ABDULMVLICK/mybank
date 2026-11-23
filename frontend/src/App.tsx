@@ -5,6 +5,7 @@ import { useAuth } from './AuthContext';
 import Layout from './components/Layout';
 import Accueil from './pages/Accueil';
 import Admin from './pages/Admin';
+import Confidentialite from './pages/Confidentialite';
 import Connexion from './pages/Connexion';
 import Inscription from './pages/Inscription';
 import Profil from './pages/Profil';
@@ -30,6 +31,7 @@ export default function App() {
     <Routes>
       <Route path="/connexion" element={<Connexion />} />
       <Route path="/inscription" element={<Inscription />} />
+      <Route path="/confidentialite" element={<Confidentialite />} />
       <Route
         element={
           <Protegee>

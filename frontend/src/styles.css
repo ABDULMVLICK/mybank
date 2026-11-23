@@ -113,3 +113,8 @@ tr.inactif td { color: var(--discret); font-style: italic; }
   .contenu { padding-top: 32px; }
   .entete { padding: 14px 32px; }
 }
+
+.pied { text-align: center; padding: 0 16px 24px; font-size: 0.85rem; }
+.pied a { color: var(--discret); }
+.texte { max-width: 70ch; line-height: 1.6; }
+.texte h2 { margin-top: 22px; }

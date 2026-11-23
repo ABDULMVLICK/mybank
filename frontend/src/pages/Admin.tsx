@@ -81,7 +81,7 @@ export default function Admin() {
         ) : (
           <div className="tableau">
             <table>
-              <thead><tr><th>Date</th><th>De</th><th>Vers</th><th className="nombre">Montant</th><th></th></tr></thead>
+              <thead><tr><th>Date</th><th>De</th><th>Vers</th><th className="nombre">Montant</th><th>Actions</th></tr></thead>
               <tbody>
                 {enAttente.map((v) => (
                   <tr key={v.id}>
@@ -105,7 +105,7 @@ export default function Admin() {
         <h2>Utilisateurs</h2>
         <div className="tableau">
           <table>
-            <thead><tr><th>Identifiant</th><th>Nom</th><th>Rôle</th><th className="nombre">Solde</th><th></th></tr></thead>
+            <thead><tr><th>Identifiant</th><th>Nom</th><th>Rôle</th><th className="nombre">Solde</th><th>Actions</th></tr></thead>
             <tbody>
               {utilisateurs.map((u) => (
                 <tr key={u.id} className={u.actif ? '' : 'inactif'}>

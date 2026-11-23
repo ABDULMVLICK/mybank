@@ -11,13 +11,19 @@ interface EntreeJournal {
   date: Date;
 }
 
+// Règle de conservation (RGPD) : une entrée du journal est effacée automatiquement après 12 mois.
+const CONSERVATION_SECONDES = 365 * 24 * 60 * 60;
+
 let collection: Collection<EntreeJournal> | null = null;
 
 export async function connecterJournal(url: string | undefined): Promise<void> {
   if (!url) return;
   const client = new MongoClient(url);
   await client.connect();
-  collection = client.db().collection<EntreeJournal>('journal');
+  const journal = client.db().collection<EntreeJournal>('journal');
+  // Index TTL : MongoDB supprime lui-même les documents dont la date est dépassée.
+  await journal.createIndex({ date: 1 }, { expireAfterSeconds: CONSERVATION_SECONDES });
+  collection = journal;
 }
 
 // Le journal ne doit jamais faire échouer une action bancaire : on enregistre l'erreur et on continue.
