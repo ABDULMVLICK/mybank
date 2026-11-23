@@ -29,8 +29,8 @@ jobs:
     env:
       DATABASE_URL: postgres://mybank:mybank@localhost:5432/mybank_test
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
@@ -47,8 +47,8 @@ jobs:
       run:
         working-directory: frontend
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
@@ -63,7 +63,7 @@ jobs:
     needs: [backend, frontend] # ne construit les images que si tous les tests passent
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: docker compose build # images de développement (Nginx + API)
       - run: docker build -t mybank-production . # image de production déployée sur Railway
 
@@ -75,7 +75,7 @@ jobs:
     env:
       RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }} # jeton du projet Railway, jamais dans le code
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Installer la CLI Railway
         run: npm install -g @railway/cli
       - name: Déployer sur Railway
