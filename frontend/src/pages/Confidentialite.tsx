@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function Confidentialite() {
   return (
     <main className="contenu">
-      <p><Link to="/">Retour à myBank</Link></p>
+      <p className="retour"><Link to="/">Retour à myBank</Link></p>
       <section className="carte texte">
         <h1>Confidentialité et mentions légales</h1>
         <p>

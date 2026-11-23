@@ -117,5 +117,7 @@ tr.inactif td { color: var(--discret); font-style: italic; }
 
 .pied { text-align: center; padding: 0 16px 24px; font-size: 0.85rem; }
 .pied a { color: var(--discret); }
-.texte { max-width: 70ch; line-height: 1.6; }
+.texte { width: 100%; max-width: 70ch; margin: 0 auto; line-height: 1.6; }
+.retour { width: 100%; max-width: 70ch; margin: 0 auto; }
+.retour a, .texte a { color: var(--indigo); }
 .texte h2 { margin-top: 22px; }
