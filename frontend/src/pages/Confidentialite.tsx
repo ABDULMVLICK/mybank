@@ -16,7 +16,7 @@ export default function Confidentialite() {
         <ul>
           <li>Votre identifiant, votre nom et votre mot de passe. Le mot de passe est haché : personne ne peut le relire.</li>
           <li>Vos opérations fictives : dépôts, retraits et virements.</li>
-          <li>Un journal technique des actions : type d'action, numéro du compte, date.</li>
+          <li>Un journal technique des actions : type d'action, numéro du compte, détails utiles (montant, numéro de virement), date, et l'identifiant saisi si une connexion est refusée.</li>
         </ul>
 
         <h2>Pourquoi</h2>
